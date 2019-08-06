@@ -430,4 +430,8 @@
   transition-timing-function: linear;
   transition-duration: 200ms;
   transition-property: opacity;
+
+  &--opened {
+    opacity: 1;
+  }
 }

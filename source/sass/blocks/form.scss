@@ -171,4 +171,8 @@
 
 .airnow-form__submit {
   flex-shrink: 0;
+
+  @media (min-width: $tablet) {
+    width: 155px;
+  }
 }

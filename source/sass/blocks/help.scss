@@ -107,6 +107,11 @@
     transform: translateY(20%);
     opacity: 0;
   }
+
+  &:hover,
+  &--opened {
+    box-shadow: 0 0 10px rgba(67, 74, 121, 0.15)
+  }
 }
 
 .airnow-help__item-question {
