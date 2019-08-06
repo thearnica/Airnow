@@ -15,7 +15,7 @@ const plugins = [
 module.exports = {
   entry: {
     index: process.env.NODE_ENV === "development"
-      ? ['webpack-dev-server/client?http://localhost:3000', './source/js/index.js']
+      ? ['webpack-dev-server/client', './source/js/index.js']
       : ['./source/js/index.js'],
     slick: ['./source/js/slick.js'],
     slider: ['./source/js/slider.js'],

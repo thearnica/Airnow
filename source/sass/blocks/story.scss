@@ -35,11 +35,13 @@
   margin: 0;
 
   @include font(47px, 57px);
-  color: #B6A0E5;
+  color: rgba(182, 160, 229, 0.2);
   text-align: center;
   white-space: nowrap;
 
-  opacity: 0.2;
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: transform, opacity;
 
   @media (min-width: $tablet) {
     @include font(94px, 114px);
@@ -51,6 +53,11 @@
 
   @media (min-width: $desktop) {
     @include font(134px, 163px);
+  }
+
+  &--hidden {
+    transform: scale(0.5);
+    opacity: 0;
   }
 }
 
@@ -92,6 +99,10 @@
 
   box-sizing: border-box;
 
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: transform, opacity;
+
   @media (min-width: $tablet) {
     margin-bottom: 20px;
     padding: 30px 6%;
@@ -108,6 +119,11 @@
     background-color: #484EEB;
 
     box-shadow: 0 2px 8px rgba(29, 28, 31, 0.2);
+  }
+
+  &--hidden {
+    transform: scale(0.7);
+    opacity: 0;
   }
 
   &:nth-child(2) {

@@ -13,7 +13,6 @@ module.exports = () => {
       template: document,
       filename,
       hash: true,
-      inject: false,
     });
   });
 };

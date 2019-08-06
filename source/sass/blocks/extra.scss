@@ -45,6 +45,10 @@
   font-weight: 700;
   text-align: center;
 
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: transform, opacity;
+
   @media (min-width: $tablet) {
     width: 60%;
     margin-bottom: 40px;
@@ -61,6 +65,11 @@
 
   @media (min-width: $desktop) {
     @include font(48px, 58px);
+  }
+
+  &--hidden {
+    transform: translateY(30%);
+    opacity: 0;
   }
 }
 
@@ -94,6 +103,10 @@
 
   box-sizing: border-box;
 
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: transform, opacity;
+
   @media (min-width: $tablet) {
     margin-bottom: 60px;
     padding: 0;
@@ -111,6 +124,11 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &--hidden {
+    transform: scale(0.5);
+    opacity: 0;
   }
 }
 
@@ -237,11 +255,24 @@
   width: 100%;
   max-width: 260px;
 
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: transform, opacity;
+
   @media (min-width: $tablet) {
     max-width: 240px;
   }
 
   @media (min-width: $laptop) {
+    height: 48px;
     max-width: 290px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 50px;
+  }
+
+  &--hidden {
+    opacity: 0;
   }
 }

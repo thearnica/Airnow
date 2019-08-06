@@ -39,6 +39,10 @@
   color: $text1000;
   text-align: center;
 
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: transform, opacity;
+
   @media (min-width: $tablet) {
     margin-bottom: 30px;
 
@@ -55,6 +59,11 @@
     margin-bottom: 45px;
 
     @include font-set(48px, 50px, 0);
+  }
+
+  &--hidden {
+    transform: translateY(30%);
+    opacity: 0;
   }
 }
 
@@ -77,6 +86,10 @@
 
   box-sizing: border-box;
 
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: transform, opacity;
+
   @media (min-width: $tablet) {
     margin-bottom: 15px;
     padding: 0 6%;
@@ -88,6 +101,11 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &--hidden {
+    transform: translateY(20%);
+    opacity: 0;
   }
 }
 
@@ -145,6 +163,10 @@
 
     transform: translate(-50%, -50%);
 
+    transition-timing-function: linear;
+    transition-duration: 200ms;
+    transition-property: transform;
+
     @media (min-width: $tablet) {
       width: 2px;
       height: 17px;
@@ -184,7 +206,13 @@
 }
 
 .airnow-help__item-answer {
+  max-height: 0;
 
+  overflow: hidden;
+
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: max-height;
 }
 
 .airnow-help__item-list {

@@ -10,7 +10,7 @@
   white-space: nowrap;
 
   border: 0;
-  border-radius: 0;
+  border-radius: 4px;
 
   background-color: $green;
 
@@ -18,7 +18,17 @@
 
   box-sizing: border-box;
 
+  transition-property: box-shadow, background-color;
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+
   &--radius {
     border-radius: 6px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #1FB86E;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
   }
 }

@@ -58,9 +58,43 @@
   }
 }
 
+.airnow-switch__title-mobile {
+  width: 90%;
+  margin: 0;
+  margin-bottom: 30px;
+
+  @include font(26px, 32px);
+  color: $text1000;
+  text-align: center;
+
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: transform, opacity;
+
+  @media (min-width: $tablet) {
+    width: 65%;
+    margin-bottom: 50px;
+
+    @include font(32px, 39px);
+  }
+
+  @media (min-width: $laptop) {
+    display: none;
+  }
+
+  &--hidden {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+}
+
 .airnow-switch__list-wrapper {
   width: 100%;
   margin-bottom: 30px;
+
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: transform, opacity;
 
   @media (min-width: $tablet) {
     width: 41%;
@@ -74,26 +108,10 @@
   @media (min-width: $desktop) {
     width: 42%;
   }
-}
 
-.airnow-switch__title-mobile {
-  width: 90%;
-  margin: 0;
-  margin-bottom: 30px;
-
-  @include font(26px, 32px);
-  color: $text1000;
-  text-align: center;
-
-  @media (min-width: $tablet) {
-    width: 65%;
-    margin-bottom: 50px;
-
-    @include font(32px, 39px);
-  }
-
-  @media (min-width: $laptop) {
-    display: none;
+  &--hidden {
+    transform: translateX(-50%);
+    opacity: 0;
   }
 }
 
@@ -267,6 +285,10 @@
   max-width: 260px;
   margin-bottom: 30px;
 
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: transform, opacity;
+
   @media (min-width: $tablet) {
     max-width: 240px;
     margin-bottom: 40px;
@@ -274,6 +296,10 @@
 
   @media (min-width: $laptop) {
     display: none;
+  }
+
+  &--hidden {
+    opacity: 0;
   }
 }
 
@@ -285,7 +311,13 @@
   @media (min-width: $laptop) {
     width: 100%;
     max-width: 290px;
+    height: 48px;
     margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100%;
+    height: 50px;
   }
 }
 
@@ -293,6 +325,10 @@
   position: relative;
 
   width: 100%;
+
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: transform, opacity;
 
   @media (min-width: $tablet) {
     width: 54%;
@@ -304,6 +340,11 @@
 
   @media (min-width: $desktop) {
     width: 48%;
+  }
+
+  &--hidden {
+    transform: translateX(50%);
+    opacity: 0;
   }
 }
 
@@ -383,4 +424,10 @@
 
   width: 74%;
   height: auto;
+
+  opacity: 0;
+
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: opacity;
 }

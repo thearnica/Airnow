@@ -8,22 +8,16 @@
   width: 100%;
   padding: 10px 0;
 
+  transition-duration: 200ms;
+  transition-property: opacity;
+  transition-timing-function: linear;
+
   @media (min-width: $tablet) {
     padding: 15px 0;
   }
 
   @media (min-width: $laptop) {
     padding: 35px 0;
-  }
-
-  &--stage-2 {
-    padding: 5px 0;
-
-    background-image: url("../images/bg-header.svg");
-  }
-
-  &--up {
-    position: fixed;
   }
 
   &--hidden {
@@ -91,12 +85,21 @@
   margin-right: 15px;
 
   @include font-set(14px, 20px, 1px);
-  color: #FFFFFF;
+  color: $white1000;
   text-transform: uppercase;
   text-decoration: none;
 
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: color;
+
   @media (min-width: $tablet) {
     margin-right: 35px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white800;
   }
 }
 

@@ -45,6 +45,10 @@
   text-align: center;
   font-weight: 700;
 
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: transform, opacity;
+
   @media (min-width: $tablet) {
     margin-bottom: 55px;
 
@@ -62,6 +66,11 @@
 
     @include font(60px, 63px);
   }
+
+  &--hidden {
+    transform: translateY(30%);
+    opacity: 0;
+  }
 }
 
 .airnow-form__form {
@@ -72,6 +81,10 @@
   max-width: 260px;
   margin: 0 auto;
 
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: transform, opacity;
+
   @media (min-width: $tablet) {
     flex-direction: row;
     align-items: initial;
@@ -81,6 +94,10 @@
 
   @media (min-width: $laptop) {
     max-width: 635px;
+  }
+
+  &--hidden {
+    opacity: 0;
   }
 }
 
@@ -98,12 +115,51 @@
   background-color: $white1000;
   box-sizing: border-box;
 
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: border-color;
+
   @media (min-width: $tablet) {
     flex-grow: 1;
 
     margin-bottom: 0;
     margin-right: 15px;
     padding: 0 25px;
+  }
+
+  &:hover {
+    & ~ .field__tip {
+      z-index: 1;
+
+      opacity: 1;
+    }
+  }
+  &:hover,
+  &:focus {
+    border-color: $green;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
+  &:-webkit-autofill {
+    color: inherit;
+
+    background-color: $white1000;
+
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      transition-delay: 9999s;
+      transition-property: background-color, color;
+    }
+  }
+
+  &:-moz-ui-invalid {
+    box-shadow: none;
   }
 
   &::placeholder {
