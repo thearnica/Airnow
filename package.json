@@ -12,7 +12,7 @@
     "build": "NODE_ENV=production webpack -p",
     "lint": "yarn jslint && yarn stylelint && yarn htmllint",
     "jslint": "eslint src --fix",
-    "now:deploy": "now --public",
+    "now:deploy": "cd build && now --public",
     "htmllint": "gulp w3validate",
     "stylelint": "stylelint 'sass/**/*.sass' --syntax sass",
     "postbuild": "gulp images --compress  &&  gulp  fonts"
