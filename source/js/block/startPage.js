@@ -25,8 +25,7 @@ const promoAnimatedElements = [
   hidden('airnow-promo__item'),
 ];
 
-const commonAnimatedElements = [
-  hidden('airnow-promo__light'),
+let block1Elements = [
   hidden('airnow-promo__tip'),
   hidden('airnow-promo__phone'),
   hidden('airnow-promo__phone-shadow'),
@@ -36,6 +35,9 @@ const commonAnimatedElements = [
   hidden('airnow-extra__text'),
   hidden('airnow-extra__item'),
   hidden('airnow-extra__start'),
+];
+
+const commonAnimatedElements = [
 
   hidden('airnow-switch__title-mobile'),
   hidden('airnow-switch__list-wrapper'),
@@ -51,7 +53,6 @@ const commonAnimatedElements = [
   hidden('airnow-help__item'),
 
   hidden('airnow-form__slogan'),
-  hidden('airnow-form__form'),
 ];
 
 export const getAdditionalAnimationClasses = () => {
@@ -60,13 +61,22 @@ export const getAdditionalAnimationClasses = () => {
   }).join(',');
 };
 
+let cachedAdvElements;
+
+const updateAdvElements = () => {
+  cachedAdvElements = QSA(getAdditionalAnimationClasses(commonAnimatedElements));
+  return cachedAdvElements;
+};
+
 export const addAnimationToCommonElements = () => {
-  commonAnimatedElements.forEach(function (sel) {
+  [
+    ...block1Elements,
+    ...commonAnimatedElements
+  ].forEach(function (sel) {
     withNoTransitionOn('.' + sel.className, element =>
       addClassTo(element, sel.className + sel.mod, true)
     );
   });
-  // document.querySelector('#hider').innerHTML='';
 };
 
 export const addAnimationToPromoElements = () => {
@@ -75,7 +85,6 @@ export const addAnimationToPromoElements = () => {
       addClassTo(element, sel.className + sel.mod, true)
     );
   });
-  // document.querySelector('#hider').innerHTML='';
 };
 
 export const removeAnimationFromCommonElement = (element) => {
@@ -84,15 +93,21 @@ export const removeAnimationFromCommonElement = (element) => {
   });
 };
 
+export const addBlock1ToCommonElements = () => {
+  commonAnimatedElements.push(...block1Elements);
+  block1Elements=[];
+  updateAdvElements();
+};
+
 //pageStart
 
-export var advElements = QSA(getAdditionalAnimationClasses(commonAnimatedElements));
+export const getAdvElements = () => cachedAdvElements || updateAdvElements();
 
 export const pageStart = () => {
   withSeal(function () {
     addAnimationToCommonElements();
 
-    advElements.forEach(trySeal);
+    getAdvElements().forEach(trySeal);
   });
 };
 
