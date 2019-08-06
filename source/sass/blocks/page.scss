@@ -10,27 +10,28 @@
   font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
 
   background-color: $white1000;
+
+  &--no-scroll {
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: "";
+      z-index: 12;
+
+      background-color: transparentize(#000000, 0.6);
+    }
+  }
+
+  &--hidden {
+    opacity: 0;
+  }
 }
 
 .airnow-page__title {
   @extend %visuallyHidden;
-}
-
-.airnow-page__header {
-  position: fixed;
-  top: 0;
-  z-index: 1;
-
-  width: 100%;
-  padding: 10px 0;
-
-  @media (min-width: $tablet) {
-    padding: 15px 0;
-  }
-
-  @media (min-width: $laptop) {
-    padding: 35px 0;
-  }
 }
 
 .airnow-page__main {
