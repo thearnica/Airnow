@@ -1,0 +1,88 @@
+.airnow-header {
+
+}
+
+.airnow-header__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: 0 6%;
+
+  box-sizing: border-box;
+
+  @media (min-width: $tablet) {
+    padding: 0 8%;
+  }
+
+  @media (min-width: $laptop) {
+    padding: 0 5%;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 4%;
+  }
+
+  @media (min-width: $maxDesktop) {
+    padding: 0 5.5%;
+  }
+}
+
+.airnow-header__logo {
+  width: 85px;
+  height: auto;
+
+  @media (min-width: $tablet) {
+    width: 138px;
+  }
+
+  @media (min-width: $laptop) {
+    width: 178px;
+  }
+}
+
+.airnow-header__logo svg {
+  width: 100%;
+  height: auto;
+}
+
+.airnow-header__buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.airnow-header__login {
+  display: inline-block;
+
+  margin-right: 15px;
+
+  @include font-set(14px, 20px, 1px);
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: $tablet) {
+    margin-right: 35px;
+  }
+}
+
+.airnow-header__sign-up {
+  @media (max-width: $only-mobile) {
+    display: none;
+  }
+}
+
+.airnow-header__sign-up-mobile {
+  @include font-set(14px, 20px, 1px);
+  color: #FFFFFF;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}

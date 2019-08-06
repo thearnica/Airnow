@@ -1,0 +1,228 @@
+.airnow-help {
+  background-color: $lightGrey;
+}
+
+.airnow-help__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: 50px 6%;
+
+  box-sizing: border-box;
+
+  @media (min-width: $tablet) {
+    padding: 70px 8%;
+  }
+
+  @media (min-width: $laptop) {
+    padding: 110px 5%;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 105px 4%;
+  }
+
+  @media (min-width: $maxDesktop) {
+    padding: 105px 5.5%;
+  }
+}
+
+.airnow-help__title {
+  margin: 0;
+  margin-bottom: 25px;
+
+  @include font-set(26px, 32px, -0.32px);
+  color: $text1000;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 30px;
+
+    @include font-set(32px, 34px, 0);
+  }
+
+  @media (min-width: $laptop) {
+    margin-bottom: 40px;
+
+    @include font-set(44px, 46px, 0);
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 45px;
+
+    @include font-set(48px, 50px, 0);
+  }
+}
+
+.airnow-help__list {
+  @extend %clearList;
+
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.airnow-help__item {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 0 7%;
+
+  border-radius: 6px;
+
+  background-color: $white1000;
+
+  box-sizing: border-box;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 15px;
+    padding: 0 10%;
+  }
+
+  @media (min-width: $laptop) {
+    padding: 0 4%;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.airnow-help__item-question {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 0;
+
+  @include font(16px, 19px);
+  font-weight: 700;
+  color: $text1000;
+
+  @media (min-width: $tablet) {
+    padding: 25px 0;
+
+    @include font(24px, 29px);
+  }
+}
+
+.airnow-help__item-toggle {
+  position: relative;
+
+  width: 33px;
+  height: 33px;
+  margin: 0;
+  padding: 0;
+  margin-left: 30px;
+
+  border: 1px solid #E7EFF8;
+  border-radius: 50%;
+
+  background-color: $white1000;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    width: 46px;
+    height: 46px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+
+    display: block;
+    width: 1.5px;
+    height: 13px;
+
+    background-color: $purple;
+
+    transform: translate(-50%, -50%);
+
+    @media (min-width: $tablet) {
+      width: 2px;
+      height: 17px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+
+    display: block;
+    height: 1.5px;
+    width: 13px;
+
+    background-color: $purple;
+
+    transform: translate(-50%, -50%);
+
+    @media (min-width: $tablet) {
+      height: 2px;
+      width: 17px;
+    }
+  }
+
+  &--opened {
+    &::before {
+      transform-origin: center;
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+}
+
+.airnow-help__item-toggle span {
+  @extend %visuallyHidden;
+}
+
+.airnow-help__item-answer {
+
+}
+
+.airnow-help__item-list {
+  @extend %clearList;
+
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 35px;
+  }
+}
+
+.airnow-help__item-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  @include font(14px, 24px);
+  color: $text800;
+
+  @media (min-width: $tablet) {
+    @include font(18px, 31px);
+  }
+
+  &::before {
+    position: relative;
+    content: '';
+
+    flex-shrink: 0;
+
+    width: 10px;
+    height: 10px;
+    margin-top: 7px;
+    margin-right: 15px;
+
+    background-image: url("../images/check.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

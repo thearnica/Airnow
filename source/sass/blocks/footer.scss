@@ -1,0 +1,145 @@
+.airnow-footer {
+}
+
+.airnow-footer__wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: 15px 6%;
+
+  box-sizing: border-box;
+
+  @media (min-width: $tablet) {
+    padding: 15px 8%;
+  }
+
+  @media (min-width: $laptop) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 25px 5%;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 25px 4%;
+  }
+
+  @media (min-width: $maxDesktop) {
+    padding: 25px 5.5%;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 6%;
+    right: 6%;
+    content: '';
+
+    display: block;
+    height: 1px;
+
+    background-color: rgba(196, 196, 196, 0.5);
+
+    @media (min-width: $tablet) {
+      left: 8%;
+      right: 8%;
+    }
+
+    @media (min-width: $laptop) {
+      left: 5%;
+      right: 5%;
+    }
+
+    @media (min-width: $desktop) {
+      left: 4%;
+      right: 4%;
+    }
+
+    @media (min-width: $maxDesktop) {
+      left: 5.5%;
+      right: 5.5%;
+    }
+  }
+}
+
+.airnow-footer__info {
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $laptop) {
+    margin-bottom: 0;
+  }
+}
+
+.airnow-footer__logo {
+  @media (min-width: $tablet) {
+    margin-right: 25px;
+  }
+}
+
+.airnow-footer__copyright-mobile {
+  margin: 0;
+
+  @include font(14px, 17px);
+  color: $text500;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.airnow-footer__copyright {
+  margin: 0;
+
+  @include font(14px, 17px);
+  color: $text500;
+
+  @media (max-width: $only-mobile) {
+    display: none;
+  }
+}
+
+.airnow-footer__list {
+  @extend %clearList;
+
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 0;
+  }
+}
+
+.airnow-footer__item {
+  margin-bottom: 10px;
+
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+    margin-right: 25px;
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.airnow-footer__link {
+  @include font(14px, 14px);
+  color: $text500;
+  text-decoration: none;
+}

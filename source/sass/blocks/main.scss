@@ -1,0 +1,95 @@
+.airnow-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.airnow-main__promo {
+  margin-bottom: 60px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $laptop) {
+    margin-bottom: 100px;
+  }
+}
+
+.airnow-main__extra {
+  position: relative;
+  margin-bottom: 65px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $laptop) {
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 120px;
+  }
+}
+
+.airnow-main__switch {
+  position: relative;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $laptop) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 90px;
+  }
+}
+
+.airnow-main__stories {
+  position: relative;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $laptop) {
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 100px;
+  }
+}
+
+.airnow-main__help {
+  margin-bottom: 50px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $laptop) {
+    margin-bottom: 80px;
+  }
+}
+
+.airnow-main__form {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: $laptop) {
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 130px;
+  }
+}

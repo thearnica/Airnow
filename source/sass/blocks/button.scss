@@ -1,0 +1,23 @@
+.airnow-button {
+  @extend %center;
+
+  padding: 10px 25px;
+
+  @include font-set(14px, 20px, 1px);
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border: 0;
+  border-radius: 0;
+
+  background-color: $green;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  &--radius {
+    border-radius: 6px;
+  }
+}
