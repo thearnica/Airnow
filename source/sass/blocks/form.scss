@@ -2,15 +2,13 @@
 }
 
 .airnow-form__wrapper {
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   width: 100%;
   max-width: $maxWidth;
   margin: 0 auto;
+}
+
+.airnow-form__content-wrapper {
+  width: 100%;
   padding: 0 6%;
 
   box-sizing: border-box;
@@ -32,8 +30,67 @@
   }
 }
 
+
+.airnow-form__wrapper-ratio {
+  position: relative;
+
+  width: 100%;
+  height: 0;
+
+  padding-top: 90%;
+
+  background-color: $white1000;
+
+  @media (min-width: $tablet) {
+    padding-top: 55%;
+  }
+
+  @media (min-width: $laptop) {
+    padding-top: 36%;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 33%;
+  }
+
+  @media (min-width: $maxDesktop) {
+    padding-top: 30%;
+  }
+}
+
+.airnow-form__wrapper-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .airnow-form__title {
   @extend %visuallyHidden;
+}
+
+.airnow-form__step-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: transform, opacity;
+
+  &--hidden {
+    z-index: -1;
+
+    transform: scale(0.7);
+    opacity: 0;
+  }
 }
 
 .airnow-form__slogan {
@@ -44,10 +101,6 @@
   color: $text1000;
   text-align: center;
   font-weight: 700;
-
-  transition-timing-function: linear;
-  transition-duration: 200ms;
-  transition-property: transform, opacity;
 
   @media (min-width: $tablet) {
     margin-bottom: 55px;
@@ -66,11 +119,6 @@
 
     @include font(60px, 63px);
   }
-
-  &--hidden {
-    transform: translateY(30%);
-    opacity: 0;
-  }
 }
 
 .airnow-form__form {
@@ -81,10 +129,6 @@
   max-width: 260px;
   margin: 0 auto;
 
-  transition-timing-function: linear;
-  transition-duration: 200ms;
-  transition-property: transform, opacity;
-
   @media (min-width: $tablet) {
     flex-direction: row;
     align-items: initial;
@@ -94,10 +138,6 @@
 
   @media (min-width: $laptop) {
     max-width: 635px;
-  }
-
-  &--hidden {
-    opacity: 0;
   }
 }
 
@@ -134,6 +174,7 @@
       opacity: 1;
     }
   }
+
   &:hover,
   &:focus {
     border-color: $green;
@@ -174,5 +215,100 @@
 
   @media (min-width: $tablet) {
     width: 155px;
+  }
+}
+
+.airnow-form__step-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: transform, opacity;
+
+  &--hidden {
+    z-index: -1;
+
+    transform: scale(0.7);
+    opacity: 1;
+  }
+}
+
+.airnow-form__thank {
+  margin: 0;
+  margin-bottom: 10px;
+
+  @include font(28px, 34px);
+  color: $text1000;
+  text-align: center;
+  font-weight: 700;
+
+  @media (min-width: $laptop) {
+    margin-bottom: 15px;
+
+    @include font(40px, 42px);
+  }
+
+  @media (min-width: $desktop) {
+    @include font(50px, 53px);
+  }
+}
+
+.airnow-form__message {
+  margin: 0;
+  margin-bottom: 10px;
+
+  @include font(16px, 19px);
+  color: $text800;
+
+  @media (min-width: $tablet) {
+    @include font(24px, 29px);
+    margin-bottom: 30px;
+  }
+}
+
+.airnow-form__image {
+  width: 40%;
+  height: auto;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet) {
+    width: 30%;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $laptop) {
+    width: 20%;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 20%;
+    margin-bottom: 35px;
+  }
+}
+
+.airnow-form__button {
+  width: 100%;
+  max-width: 260px;
+
+  @media (min-width: $tablet) {
+    max-width: 240px;
+  }
+
+  @media (min-width: $laptop) {
+    max-width: 290px;
+    height: 48px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 50px;
   }
 }

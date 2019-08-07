@@ -3,13 +3,17 @@
 }
 
 .airnow-stories__wrapper {
+  width: 100%;
+  max-width: $maxWidth;
+  margin: 0 auto;
+}
+
+.airnow-stories__content-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   width: 100%;
-  max-width: $maxWidth;
-  margin: 0 auto;
   padding: 0 6%;
 
   box-sizing: border-box;

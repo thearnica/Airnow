@@ -74,22 +74,7 @@
   }
 
   @media (min-width: $laptop) {
-    margin-bottom: 80px;
+    margin-bottom: 65px;
   }
 }
 
-.airnow-main__form {
-  margin-bottom: 40px;
-
-  @media (min-width: $tablet) {
-    margin-bottom: 75px;
-  }
-
-  @media (min-width: $laptop) {
-    margin-bottom: 100px;
-  }
-
-  @media (min-width: $desktop) {
-    margin-bottom: 130px;
-  }
-}

@@ -51,7 +51,7 @@ const commonAnimatedElements = [
   hidden('airnow-help__title'),
   hidden('airnow-help__item'),
 
-  hidden('airnow-form__slogan'),
+  hidden('airnow-form__wrapper'),
 ];
 
 export const getAdditionalAnimationClasses = () => {
