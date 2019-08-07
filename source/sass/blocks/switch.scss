@@ -387,43 +387,71 @@
   height: auto;
 }
 
-.airnow-switch__report-wrapper-1 {
+.airnow-switch__count-wrapper {
   position: absolute;
-  top: 20%;
-  left: 11%;
+  top: 23%;
+  left: 42%;
 
-  width: 26%;
+  width: 20%;
 }
 
-.airnow-switch__report-wrapper-2 {
-  position: absolute;
-  top: 31%;
-  left: 37.5%;
+.airnow-switch__count-ratio {
+  position: relative;
 
-  width: 26%;
-}
-
-.airnow-switch__report-wrapper-3 {
-  position: absolute;
-  top: 42%;
-  left: 65%;
-
-  width: 26%;
-}
-
-
-.airnow-switch__cell {
   width: 100%;
-  height: auto;
+  height: 0;
+
+  padding-top: 80%;
 }
 
-.airnow-switch__report {
+.airnow-switch__count-content {
   position: absolute;
-  top: 11%;
-  left: 9%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 
-  width: 74%;
-  height: auto;
+.airnow-switch__amount {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  opacity: 0;
+
+  &--visible {
+    opacity: 1;
+  }
+}
+
+.airnow-switch__report-wrapper {
+  position: absolute;
+  width: 24%;
+
+  &--1 {
+    top: 20%;
+    left: 11%;
+  }
+
+  &--2 {
+    top: 31%;
+    left: 37.5%;
+  }
+
+  &--3 {
+    top: 42%;
+    left: 65%;
+  }
+}
+
+.airnow-switch__shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
   opacity: 0;
 
@@ -434,4 +462,47 @@
   &--opened {
     opacity: 1;
   }
+}
+
+.airnow-switch__report {
+  width: 100%;
+  height: auto;
+
+  color: #CAD1E6;
+
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: color, transform;
+
+  &--opened {
+    transform: scale(1.02) translate(-3%, 3%);
+  }
+
+  &--opened.airnow-switch__report--1 {
+    color: #569FF5;
+  }
+
+  &--opened.airnow-switch__report--2 {
+    color: #8432EC;
+  }
+
+  &--opened.airnow-switch__report--3 {
+    color: #2FC37C;
+  }
+
+  &--opened .airnow-switch__graph {
+    opacity: 0;
+  }
+
+  &--opened .airnow-switch__graph-grow {
+    opacity: 1;
+  }
+}
+
+.airnow-switch__graph-grow {
+  opacity: 0;
+
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: opacity;
 }

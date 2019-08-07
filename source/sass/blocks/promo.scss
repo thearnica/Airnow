@@ -38,7 +38,7 @@
   z-index: 1;
 
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   @include font(26px, 28px);
   font-weight: 700;
@@ -74,18 +74,18 @@
 }
 
 .airnow-promo__start {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 260px;
+  margin-bottom: 20px;
+
   transition-duration: 200ms;
   transition-timing-function: linear;
   transition-property: opacity, transform;
 
-  @media (max-width: $only-mobile) {
-    display: none;
-  }
-
   @media (min-width: $tablet) {
-    position: relative;
-    z-index: 1;
-
     width: 100%;
     margin-bottom: 30px;
     max-width: 240px;
@@ -150,6 +150,11 @@
   transition-timing-function: linear;
   transition-property: opacity, transform;
 
+  animation-name: float;
+  animation-timing-function: ease;
+  animation-duration: 2400ms;
+  animation-iteration-count: infinite;
+
   @media (min-width: $tablet) {
     width: 124px;
     height: 114px;
@@ -167,6 +172,18 @@
     width: 190px;
     height: 175px;
     margin-right: 30px;
+  }
+
+  &:first-child {
+    animation-delay: 500ms;
+  }
+
+  &:nth-child(2) {
+    animation-delay: 300ms;
+  }
+
+  &:last-child {
+    animation-delay: 100ms;
   }
 
   &:first-child,
@@ -292,40 +309,52 @@
 
 .airnow-promo__decor {
   position: absolute;
-  bottom: 240px;
+  bottom: 265px;
   left: 50%;
 
-  width: 175%;
+  width: 185%;
   height: auto;
 
   transform: translateX(-50%);
 
   @media (min-width: 360px) {
-    bottom: 250px;
+    bottom: 270px;
 
-    width: 162%;
+    width: 170%;
   }
 
-  @media (min-width: 375px) {
-    width: 155%;
+  @media (min-width: 385px) {
+    width: 160%;
   }
 
   @media (min-width: 410px) {
-    bottom: 255px;
+    width: 165%;
+  }
+
+  @media (min-width: 440px) {
+    width: 155%;
   }
 
   @media (min-width: 470px) {
-    bottom: 280px;
+    bottom: 285px;
+  }
 
-    width: 150%;
+  @media (min-width: 530px) {
+    bottom: 315px;
   }
 
   @media (min-width: 550px) {
-    bottom: 300px;
+    bottom: 315px;
+
+    width: 145%;
   }
 
   @media (min-width: 570px) {
-    bottom: 335px;
+    bottom: 305px;
+  }
+
+  @media (min-width: 600px) {
+    width: 135%;
   }
 
   @media (min-width: $tablet) {
@@ -480,29 +509,44 @@
   width: 100%;
 }
 
+.airnow-promo__top-light {
+  animation-name: light;
+  animation-timing-function: ease;
+  animation-duration: 600ms;
+  animation-iteration-count: infinite;
+}
+
 .airnow-promo__bottom {
   position: absolute;
   bottom: 0;
   z-index: 1;
 
-  width: 95%;
+  width: 94.9%;
+  margin-left: 0.3%;
 }
 
-.airnow-promo__light {
-  width: 64%;
-  height: auto;
-  margin-top: -22%;
-
-  transform-origin: top;
-
-  transition-timing-function: linear;
-  transition-duration: 300ms;
-  transition-property: transform;
-
-  &--hidden {
-    transform: scale(0);
-  }
+.airnow-promo__bottom-light {
+  animation-name: light;
+  animation-timing-function: ease;
+  animation-duration: 600ms;
+  animation-iteration-count: infinite;
+  animation-delay: 400ms;
 }
+
+.airnow-promo__gear {
+  //animation-name: gear;
+  //animation-timing-function: ease;
+  //animation-duration: 600ms;
+  //animation-iteration-count: infinite;
+}
+
+.airnow-promo__lamp {
+  animation-name: lamp;
+  animation-timing-function: ease;
+  animation-duration: 400ms;
+  animation-iteration-count: infinite;
+}
+
 
 .airnow-promo__case-wrapper {
   position: relative;
@@ -522,7 +566,7 @@
   transition-timing-function: linear;
   transition-duration: 400ms;
   transition-property: transform, opacity;
-  transition-delay: 700ms;
+  transition-delay: 800ms;
 
   &--hidden {
     transform: translateY(-200px) scale(0.5);
@@ -555,6 +599,15 @@
   width: 60%;
   height: auto;
   margin-top: -8%;
+
+  transition-timing-function: linear;
+  transition-duration: 400ms;
+  transition-property: transform, opacity;
+
+  &--hidden {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
 }
 
 .airnow-promo__phone {
@@ -563,16 +616,6 @@
 
   width: 100%;
   height: auto;
-
-  transition-timing-function: linear;
-  transition-duration: 400ms;
-  transition-property: transform, opacity;
-  transition-delay: 500ms;
-
-  &--hidden {
-    transform: translateY(-400px) scale(0.3);
-    opacity: 0;
-  }
 }
 
 .airnow-promo__phone-shadow {
@@ -582,15 +625,6 @@
 
   width: 100%;
   height: auto;
-
-  transition-timing-function: linear;
-  transition-duration: 200ms;
-  transition-property: opacity;
-  transition-delay: 300ms;
-
-  &--hidden {
-    opacity: 0;
-  }
 }
 
 .airnow-promo__tip {
@@ -608,7 +642,7 @@
   }
 
   &--hidden {
-    transform: scale(0.5);
+    transform: translateY(-200%);
     opacity: 0;
   }
 }

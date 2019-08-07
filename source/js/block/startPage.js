@@ -27,8 +27,7 @@ const promoAnimatedElements = [
 
 let block1Elements = [
   hidden('airnow-promo__tip'),
-  hidden('airnow-promo__phone'),
-  hidden('airnow-promo__phone-shadow'),
+  hidden('airnow-promo__phone-wrapper'),
   hidden('airnow-promo__case'),
   hidden('airnow-promo__case-shadow'),
 
