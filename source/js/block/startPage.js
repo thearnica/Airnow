@@ -30,29 +30,9 @@ let block1Elements = [
   hidden('airnow-promo__phone-wrapper'),
   hidden('airnow-promo__case'),
   hidden('airnow-promo__case-shadow'),
-
-  hidden('airnow-extra__text'),
-  hidden('airnow-extra__item'),
-  hidden('airnow-extra__start'),
 ];
 
-const commonAnimatedElements = [
-
-  hidden('airnow-switch__title-mobile'),
-  hidden('airnow-switch__list-wrapper'),
-  hidden('airnow-switch__image'),
-  hidden('airnow-switch__start-mobile'),
-
-  hidden('airnow-stories__title'),
-  hidden('airnow-stories__item'),
-
-  hidden('airnow-ready__info'),
-
-  hidden('airnow-help__title'),
-  hidden('airnow-help__item'),
-
-  hidden('airnow-form__wrapper'),
-];
+const commonAnimatedElements = [];
 
 export const getAdditionalAnimationClasses = () => {
   return commonAnimatedElements.map(function (el) {
