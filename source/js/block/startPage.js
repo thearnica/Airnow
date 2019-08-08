@@ -34,6 +34,23 @@ let block1Elements = [
 
 const commonAnimatedElements = [];
 
+const handlers = {};
+
+const runHandler = (selector, name) => {
+  const cmds = (handlers[selector] || {})[name] || [];
+  cmds.forEach(cmd => cmd());
+};
+
+export const addHandler = (selector, name, cb) => {
+  if (!handlers[selector]) {
+    handlers[selector] = {};
+  }
+  if (!handlers[selector][name]) {
+    handlers[selector][name] = [];
+  }
+  handlers[selector][name].push(cb);
+};
+
 export const getAdditionalAnimationClasses = () => {
   return commonAnimatedElements.map(function (el) {
     return "." + el.className
@@ -68,13 +85,17 @@ export const addAnimationToPromoElements = () => {
 
 export const removeAnimationFromCommonElement = (element) => {
   commonAnimatedElements.forEach(function (sel) {
-    element.classList.remove(sel.className + sel.mod);
+    const className = sel.className + sel.mod;
+    if (element.classList.contains(className)) {
+      element.classList.remove(className);
+      runHandler('.' + sel.className, 'common-animation')
+    }
   });
 };
 
 export const addBlock1ToCommonElements = () => {
   commonAnimatedElements.push(...block1Elements);
-  block1Elements=[];
+  block1Elements = [];
   updateAdvElements();
 };
 

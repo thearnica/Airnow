@@ -547,6 +547,14 @@
   animation-iteration-count: infinite;
 }
 
+.airnow-promo__device {
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.airnow-promo__device--move-out {
+  transform: translateX(50vw);
+}
 
 .airnow-promo__case-wrapper {
   position: relative;
