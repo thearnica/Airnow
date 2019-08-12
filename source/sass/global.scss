@@ -1,3 +1,7 @@
 .no-transition{
   transition: none !important;
 }
+
+.accessible-tabs * {
+  outline: initial;
+}

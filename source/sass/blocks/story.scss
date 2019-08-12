@@ -104,7 +104,7 @@
 
   transition-timing-function: linear;
   transition-duration: 200ms;
-  transition-property: transform, opacity;
+  transition-property: border-color, box-shadow;
 
   @media (min-width: $tablet) {
     margin-bottom: 20px;
@@ -117,6 +117,13 @@
     width: 30%;
     margin-bottom: 0;
     padding: 35px 3%;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: #7A35FF;
+
+    box-shadow: 0 2px 8px rgba(29, 28, 31, 0.2);
   }
 
   &--opened {

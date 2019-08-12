@@ -44,10 +44,10 @@
   overflow: hidden;
 }
 
-* {
+.no-outline * {
   outline: none;
 }
 
 button {
-  -webkit-tap-highlight-color: transparent;
+  //-webkit-tap-highlight-color: transparent;
 }
