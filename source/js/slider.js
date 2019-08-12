@@ -12,9 +12,7 @@ if (window.matchMedia("(max-width: 639px)").matches) {
       slidesToScroll: 1,
     });
   });
-}
 
-if (window.matchMedia("(max-width: 639px)").matches) {
   $(document).ready(function () {
     $('.airnow-stories__list').slick({
       dots: true,
