@@ -108,18 +108,6 @@
   }
 }
 
-.airnow-promo__start-mobile {
-  position: relative;
-  z-index: 1;
-
-  width: 100%;
-  max-width: 260px;
-
-  @media (min-width: $tablet) {
-    display: none;
-  }
-}
-
 .airnow-promo__list {
   position: relative;
   z-index: 1;
@@ -127,24 +115,41 @@
   @extend %clearList;
 
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: initial;
+
+  width: 70%;
+  max-width: 260px;
+
+  @media (min-width: 375px) {
+    width: 60%;
+  }
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+  }
 }
 
 .airnow-promo__item {
   display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
   align-items: center;
 
-  width: 110px;
-  height: 102px;
-  margin-right: 20px;
+  width: 100%;
+  height: 38px;
+  margin-bottom: 5px;
+  padding: 0 5%;
 
   border-radius: 10px;
 
   background-color: $white1000;
+
+  box-sizing: border-box;
 
   transition-duration: 200ms;
   transition-timing-function: linear;
@@ -155,7 +160,15 @@
   animation-duration: 2400ms;
   animation-iteration-count: infinite;
 
+  @media (min-width: 375px) {
+    height: 42px;
+  }
+
   @media (min-width: $tablet) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
     width: 124px;
     height: 114px;
     margin-right: 15px;
@@ -175,39 +188,31 @@
   }
 
   &:first-child {
-    animation-delay: 500ms;
+    @media (min-width: $tablet) {
+      animation-delay: 500ms;
+    }
   }
 
   &:nth-child(2) {
-    animation-delay: 300ms;
+    @media (min-width: $tablet) {
+      animation-delay: 300ms;
+    }
   }
 
   &:last-child {
-    animation-delay: 100ms;
+    @media (min-width: $tablet) {
+      animation-delay: 100ms;
+    }
   }
 
   &:first-child,
   &:last-child {
-    position: relative;
-    z-index: 0;
-
-    transition-delay: 200ms;
+    @media (min-width: $tablet) {
+      transition-delay: 200ms;
+    }
   }
 
   &:nth-child(2) {
-    margin-top: 35px;
-
-    @media (max-width: $only-mobile) {
-      position: absolute;
-      z-index: 1;
-      left: 50%;
-
-      margin-left: -55px;
-      margin-right: 0;
-
-      box-shadow: 0 0 10px rgba(25, 7, 48, 0.18);
-    }
-
     @media (min-width: $tablet) {
       margin-top: 20px;
     }
@@ -234,34 +239,50 @@
 
 .airnow-promo__item-title {
   margin: 0;
-  margin-top: 5px;
 
-  @include font(14px, 17px);
+  @include font(13px, 16px);
   text-align: center;
   color: $text1000;
 
-  @media (min-width: $laptop) {
-    margin-top: 10px;
+  @media (min-width: $tablet) {
+    @include font(14px, 17px);
+  }
 
+  @media (min-width: $laptop) {
     @include font(20px, 24px);
   }
 
   @media (min-width: $desktop) {
-    margin-top: 15px;
-
     @include font(22px, 27px);
+  }
+
+  br {
+    @media (max-width: $only-mobile) {
+      display: none;
+    }
   }
 }
 
 .airnow-promo__item-icon {
   @extend %center;
 
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 
   @media (min-width: $laptop) {
     width: 40px;
     height: 40px;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  @media (min-width: $laptop) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 15px;
   }
 
   @media (min-width: $desktop) {
@@ -271,12 +292,16 @@
 }
 
 .airnow-promo__pirated {
-  width: 100%;
+  width: 18px;
   height: auto;
+
+  @media (min-width: $laptop) {
+    width: 100%;
+  }
 }
 
 .airnow-promo__mediation {
-  width: 25px;
+  width: 20px;
   height: auto;
 
   @media (min-width: $laptop) {
@@ -289,7 +314,7 @@
 }
 
 .airnow-promo__monetization {
-  width: 20px;
+  width: 18px;
   height: auto;
 
   @media (min-width: $laptop) {
@@ -307,60 +332,50 @@
   width: 100%;
 }
 
-.airnow-promo__decor {
+.airnow-promo__mobile-decor {
   position: absolute;
-  bottom: 265px;
+  bottom: 210px;
   left: 50%;
 
-  width: 185%;
+  width: 100%;
   height: auto;
 
   transform: translateX(-50%);
 
   @media (min-width: 360px) {
-    bottom: 270px;
-
-    width: 170%;
+    bottom: 230px;
   }
 
-  @media (min-width: 385px) {
-    width: 160%;
-  }
-
-  @media (min-width: 410px) {
-    width: 165%;
-  }
-
-  @media (min-width: 440px) {
-    width: 155%;
+  @media (min-width: 400px) {
+    bottom: 250px;
   }
 
   @media (min-width: 470px) {
     bottom: 285px;
   }
 
-  @media (min-width: 530px) {
-    bottom: 315px;
-  }
-
   @media (min-width: 550px) {
-    bottom: 315px;
-
-    width: 145%;
-  }
-
-  @media (min-width: 570px) {
-    bottom: 305px;
-  }
-
-  @media (min-width: 600px) {
-    width: 135%;
+    bottom: 330px;
   }
 
   @media (min-width: $tablet) {
-    bottom: 355px;
+    display: none;
+  }
+}
 
+.airnow-promo__decor {
+  display: none;
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    bottom: 370px;
+    left: 50%;
+
+    display: block;
     width: 145%;
+    height: auto;
+
+    transform: translateX(-50%);
   }
 
   @media (min-width: 768px) {
@@ -571,7 +586,7 @@
 }
 
 .airnow-promo__device-content {
-position: absolute;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
