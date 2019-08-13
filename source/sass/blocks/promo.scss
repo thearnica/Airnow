@@ -131,6 +131,7 @@
     justify-content: center;
 
     width: auto;
+    max-width: none;
   }
 }
 
@@ -172,6 +173,7 @@
     width: 124px;
     height: 114px;
     margin-right: 15px;
+    padding: 0;
   }
 
   @media (min-width: $laptop) {
