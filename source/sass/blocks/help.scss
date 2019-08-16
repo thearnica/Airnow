@@ -140,6 +140,8 @@
 .airnow-help__item-toggle {
   position: relative;
 
+  flex-shrink: 0;
+
   width: 33px;
   height: 33px;
   margin: 0;

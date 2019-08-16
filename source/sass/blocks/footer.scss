@@ -75,9 +75,16 @@
 }
 
 .airnow-footer__logo {
+  width: 25px;
+
   @media (min-width: $tablet) {
     margin-right: 25px;
   }
+}
+
+.airnow-footer__logo img {
+  width: 100%;
+  height: auto;
 }
 
 .airnow-footer__copyright-mobile {

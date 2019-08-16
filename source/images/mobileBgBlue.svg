@@ -2,10 +2,9 @@
     <path d="M-76 326.827C-66.0328 340.116 -50.5091 348.417 -33.9134 349.153C-11.5267 350.145 8.06863 364.498 15.7678 385.543L21.7282 401.835L48.8058 465.638L156.494 491.159L269.784 467.817L299.351 401.835L305.785 380.092C312.675 356.808 334.063 340.832 358.345 340.832C373.365 340.832 386.395 330.461 389.766 315.824L394.901 293.524V-22H-76V326.827Z"
           fill="url(#paint0_linear)"/>
     <defs>
-        <linearGradient id="paint0_linear" x1="-76.0008" y1="300.371" x2="180.501" y2="87.7242"
-                        gradientUnits="userSpaceOnUse">
+        <linearGradient id="paint0_linear" x1="-4.00233" y1="337.997" x2="820.136" y2="-345.234" gradientUnits="userSpaceOnUse">
             <stop stop-color="#5AA9DC"/>
-            <stop offset="0.534561" stop-color="#7148E6"/>
+            <stop offset="0.534561" stop-color="#4887E6"/>
             <stop offset="1" stop-color="#2952EE"/>
         </linearGradient>
     </defs>

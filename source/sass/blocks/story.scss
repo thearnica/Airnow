@@ -39,9 +39,11 @@
   margin: 0;
 
   @include font(47px, 57px);
-  color: rgba(182, 160, 229, 0.2);
+  color: $purple;
   text-align: center;
   white-space: nowrap;
+
+  opacity: 0.2;
 
   transition-timing-function: linear;
   transition-duration: 200ms;
@@ -95,7 +97,7 @@
   width: 100%;
   padding: 25px 5%;
 
-  border: 2px solid #7A35FF;
+  border: 2px solid $purple;
   border-radius: 10px;
 
   background-color: $white1000;
@@ -121,13 +123,13 @@
 
   &:hover,
   &:focus {
-    border-color: #7A35FF;
+    border-color: $purple;
 
     box-shadow: 0 2px 8px rgba(29, 28, 31, 0.2);
   }
 
   &--opened {
-    border-color: #7A35FF;
+    border-color: $purple;
 
     box-shadow: 0 2px 8px rgba(29, 28, 31, 0.2);
   }

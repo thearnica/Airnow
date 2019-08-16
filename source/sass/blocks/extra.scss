@@ -102,7 +102,7 @@
 .airnow-extra__item {
   padding: 0 5%;
 
-  border: 2px solid #7A35FF;
+  border: 2px solid $purple;
   border-radius: 10px;
 
   box-sizing: border-box;
@@ -159,6 +159,8 @@
   align-items: center;
 
   height: 125px;
+
+  color: $purple;
 
   @media (min-width: $tablet) {
     justify-content: flex-start;
