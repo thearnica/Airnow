@@ -23,4 +23,15 @@ if (window.matchMedia("(max-width: 639px)").matches) {
       slidesToScroll: 1,
     });
   });
+
+  $(document).ready(function () {
+    $('.airnow-join__list').slick({
+      dots: true,
+      arrows: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    });
+  });
 }

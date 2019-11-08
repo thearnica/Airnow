@@ -6,8 +6,6 @@
     padding-top: 65px;
     padding-bottom: 50px;
 
-    background-image: linear-gradient(180deg, #FFFFFF 42.02%, rgba(231, 239, 248, 0.6) 100%);
-
     @media (min-width: $tablet) {
       padding-top: 100px;
       padding-bottom: 60px;
@@ -98,4 +96,17 @@
     margin-bottom: 65px;
   }
 }
+
+.airnow-main__join {
+  margin-bottom: 55px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: $laptop) {
+    margin-bottom: 110px;
+  }
+}
+
 

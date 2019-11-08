@@ -1,5 +1,5 @@
 .airnow-blog {
-
+  background-image: linear-gradient(180deg, #FFFFFF 42.02%, rgba(231, 239, 248, 0.6) 100%);
 }
 
 .airnow-blog__wrapper {
@@ -86,14 +86,14 @@
   margin-bottom: 40px;
 
   @media (min-width: $tablet) {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 22px;
 
     margin-bottom: 60px;
   }
 
   @media (min-width: $laptop) {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
 
     max-width: $innerMaxWidth;
   }
@@ -121,5 +121,6 @@
 
   @media (min-width: $tablet) {
     min-width: 310px;
+    height: 50px;
   }
 }
