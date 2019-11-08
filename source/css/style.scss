@@ -6,11 +6,17 @@
 @import "../sass/slick/slick";
 @import "../sass/slick/slick-theme";
 
-@import "../sass/blocks/dollar";
-@import "../sass/blocks/button";
+//common block
 @import "../sass/blocks/page";
 @import "../sass/blocks/header";
 @import "../sass/blocks/main";
+@import "../sass/blocks/footer";
+@import "../sass/blocks/modal";
+@import "../sass/blocks/navigation";
+@import "../sass/blocks/button";
+
+//main page
+@import "../sass/blocks/dollar";
 @import "../sass/blocks/promo";
 @import "../sass/blocks/extra";
 @import "../sass/blocks/switch";
@@ -18,4 +24,7 @@
 @import "../sass/blocks/ready";
 @import "../sass/blocks/help";
 @import "../sass/blocks/form";
-@import "../sass/blocks/footer";
+
+//blog page
+@import "../sass/blocks/blog";
+@import "../sass/blocks/article";

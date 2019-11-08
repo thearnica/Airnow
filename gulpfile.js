@@ -3,6 +3,7 @@ const imagemin = require('gulp-imagemin');
 const ifElse = require('gulp-if-else');
 const argv = require('yargs').argv;
 const w3cjs = require('gulp-w3cjs');
+const webp = require("gulp-webp");
 
 gulp.task('images', () => {
   gulp.src(['source/images/**/*.{jpg,jpeg,png,gif,svg,webp}'])
@@ -19,4 +20,11 @@ gulp.task('w3validate', () => {
 gulp.task('fonts', () => {
   gulp.src(['source/css/fonts/**/*.{woff,woff2,eot,ttf}',])
     .pipe(gulp.dest('build/css/fonts'));
+});
+
+gulp.task('webp', () => {
+  gulp
+    .src("source/images/**/*.{png, jpg}")
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("source/images"));
 });

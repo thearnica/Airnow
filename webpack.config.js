@@ -17,6 +17,7 @@ module.exports = {
     index: process.env.NODE_ENV === "development"
       ? ['webpack-dev-server/client', './source/js/index.js']
       : ['./source/js/index.js'],
+    main: ['./source/js/main.js'],
     slick: ['./source/js/slick.js'],
     slider: ['./source/js/slider.js'],
   },

@@ -43,7 +43,7 @@
 
   width: 100%;
   margin-bottom: 35px;
-  max-width: 1160px;
+  max-width: $innerMaxWidth;
 
   @media (min-width: $tablet) {
     flex-direction: row;
@@ -143,7 +143,7 @@
 }
 
 .airnow-switch__list {
-  @extend %clearList;
+  @include clearList;
 
   display: flex;
   flex-direction: column;
@@ -176,7 +176,7 @@
 }
 
 .airnow-switch__checkbox {
-  @extend %visuallyHidden;
+  @include visuallyHidden;
 }
 
 .airnow-switch__checkbox:checked ~ .airnow-switch__label {
@@ -256,7 +256,7 @@
 .airnow-switch__off {
   position: relative;
 
-  @extend %center;
+  @include center;
 
   width: 33px;
   height: 33px;
@@ -274,7 +274,7 @@
 .airnow-switch__on {
   position: relative;
 
-  @extend %center;
+  @include center;
 
   width: 33px;
   height: 33px;

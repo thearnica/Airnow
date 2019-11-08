@@ -67,7 +67,7 @@
 }
 
 .airnow-form__title {
-  @extend %visuallyHidden;
+  @include visuallyHidden;
 }
 
 .airnow-form__step-1 {

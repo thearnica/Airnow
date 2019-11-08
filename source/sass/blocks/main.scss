@@ -1,6 +1,27 @@
 .airnow-main {
   display: flex;
   flex-direction: column;
+
+  &--inner {
+    padding-top: 65px;
+    padding-bottom: 50px;
+
+    background-image: linear-gradient(180deg, #FFFFFF 42.02%, rgba(231, 239, 248, 0.6) 100%);
+
+    @media (min-width: $tablet) {
+      padding-top: 100px;
+      padding-bottom: 60px;
+    }
+
+    @media (min-width: $laptop) {
+      padding-top: 110px;
+      padding-bottom: 80px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-top: 160px;
+    }
+  }
 }
 
 .airnow-main__promo {

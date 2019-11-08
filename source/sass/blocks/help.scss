@@ -72,7 +72,7 @@
 }
 
 .airnow-help__list {
-  @extend %clearList;
+  @include clearList;
 
   width: 100%;
   max-width: 900px;
@@ -213,7 +213,7 @@
 }
 
 .airnow-help__item-toggle span {
-  @extend %visuallyHidden;
+  @include visuallyHidden;
 }
 
 .airnow-help__item-answer {
@@ -227,7 +227,7 @@
 }
 
 .airnow-help__item-list {
-  @extend %clearList;
+  @include clearList;
 
   padding-bottom: 20px;
 

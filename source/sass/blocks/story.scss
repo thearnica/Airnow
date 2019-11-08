@@ -68,10 +68,10 @@
 }
 
 .airnow-stories__list {
-  @extend %clearList;
+  @include clearList;
 
   width: 80%;
-  max-width: 1160px;
+  max-width: $innerMaxWidth;
 
   @media (min-width: $tablet) {
     position: relative;
@@ -173,7 +173,7 @@
 }
 
 .airnow-stories__item-image {
-  @extend %center;
+  @include center;
 
   width: 78px;
   height: 78px;

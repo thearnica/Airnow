@@ -3,11 +3,17 @@ $laptop: 1024px;
 $desktop: 1280px;
 $maxDesktop: 1510px;
 $only-mobile: 639px;
+$only-tablet: 1023px;
+$only-laptop: 1279px;
+
 
 $text1000: rgba(67,74,121, 1);
 $text800: rgba(67,74,121, 0.8);
 $text700: rgba(67,74,121, 0.7);
+$text600: rgba(67,74,121, 0.6);
 $text500: rgba(67,74,121, 0.5);
+
+$title: #5C4EFE;
 
 $white1000: rgba(255,255,255, 1);
 $white850: rgba(255,255,255, 0.85);
@@ -20,7 +26,8 @@ $green: #2FC37C;
 $grey: #A6BDD1;
 $lightGrey: #E7EFF8;
 $lightPurple: #B6A0E5;
-$purple: #276BFF;
+$purple: #6F2FEC;
 
 
 $maxWidth: 1510px;
+$innerMaxWidth: 1160px;

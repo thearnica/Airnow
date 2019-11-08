@@ -56,6 +56,8 @@
 }
 
 .airnow-header__logo {
+  @include center;
+
   width: 85px;
   height: auto;
 
@@ -66,6 +68,19 @@
   @media (min-width: $laptop) {
     width: 178px;
   }
+
+  &--inner {
+    width: 78px;
+
+    @media (min-width: $tablet) {
+      width: 125px;
+    }
+
+    @media (min-width: $laptop) {
+      width: 164px;
+      margin-top: -10px;
+    }
+  }
 }
 
 .airnow-header__logo svg {
@@ -73,16 +88,31 @@
   height: auto;
 }
 
+.airnow-header__navigation {
+  @media (max-width: $only-tablet) {
+    display: none;
+  }
+
+  @media (min-width: $maxDesktop) {
+    margin-left: auto;
+    margin-right: 100px;
+  }
+}
+
 .airnow-header__buttons {
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  @media (max-width: $only-tablet) {
+    display: none;
+  }
 }
 
 .airnow-header__login {
   display: inline-block;
 
-  margin-right: 15px;
+  margin-right: 35px;
 
   @include font-set(14px, 20px, 1px);
   color: $white1000;
@@ -93,28 +123,52 @@
   transition-duration: 200ms;
   transition-property: color;
 
-  @media (min-width: $tablet) {
-    margin-right: 35px;
-  }
-
   &:hover,
   &:focus {
     color: $white800;
   }
+
+  &--inner {
+    color: $text600;
+  }
+
+  &--inner:hover,
+  &--inner:focus {
+    color: $purple;
+  }
 }
 
 .airnow-header__sign-up {
-  @media (max-width: $only-mobile) {
+
+}
+
+.airnow-header__toggle {
+  @include center;
+
+  width: 24px;
+  padding: 0;
+  margin: 0;
+
+  color: $white1000;
+
+  border: 0;
+
+  background-color: transparent;
+
+  @media (min-width: $laptop) {
     display: none;
+  }
+
+  &--inner {
+    color: $purple;
   }
 }
 
-.airnow-header__sign-up-mobile {
-  @include font-set(14px, 20px, 1px);
-  color: #FFFFFF;
-  text-transform: uppercase;
+.airnow-header__toggle span {
+  @include visuallyHidden;
+}
 
-  @media (min-width: $tablet) {
-    display: none;
-  }
+.airnow-header__toggle svg {
+  width: 100%;
+  height: auto;
 }

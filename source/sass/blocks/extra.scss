@@ -36,7 +36,7 @@
 }
 
 .airnow-extra__title {
-  @extend %visuallyHidden;
+  @include visuallyHidden;
 }
 
 .airnow-extra__text {
@@ -78,7 +78,7 @@
 }
 
 .airnow-extra__list {
-  @extend %clearList;
+  @include clearList;
 
   width: 80%;
 
@@ -95,7 +95,7 @@
     justify-content: space-between;
     align-items: initial;
 
-    max-width: 1160px;
+    max-width: $innerMaxWidth;
   }
 }
 

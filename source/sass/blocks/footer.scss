@@ -110,7 +110,7 @@
 }
 
 .airnow-footer__list {
-  @extend %clearList;
+  @include clearList;
 
   margin-bottom: 25px;
 

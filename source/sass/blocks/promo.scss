@@ -30,7 +30,7 @@
 }
 
 .airnow-promo__title {
-  @extend %visuallyHidden;
+  @include visuallyHidden;
 }
 
 .airnow-promo__slogan {
@@ -112,7 +112,7 @@
   position: relative;
   z-index: 1;
 
-  @extend %clearList;
+  @include clearList;
 
   display: flex;
   flex-direction: column;
@@ -266,7 +266,7 @@
 }
 
 .airnow-promo__item-icon {
-  @extend %center;
+  @include center;
 
   width: 20px;
   height: 20px;

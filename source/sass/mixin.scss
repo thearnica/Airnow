@@ -14,19 +14,19 @@
   font-weight: $weight;
 }
 
-%globalAnimated {
+@mixin globalAnimated {
   animation-duration: 1s;
   animation-fill-mode: both;
 }
 
-%center {
+@mixin center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-%visuallyHidden {
+@mixin visuallyHidden {
   position: absolute;
   top: 0;
   left: 0;
@@ -42,14 +42,14 @@
   overflow: hidden;
 }
 
-%clearList {
+@mixin clearList {
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
-%image {
+@mixin image {
   width: 100%;
   height: auto;
 }

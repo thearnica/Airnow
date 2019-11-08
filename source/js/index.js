@@ -1,3 +1,3 @@
 import '../css/style.scss'
 
-import './test'
+import './block/modal'

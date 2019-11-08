@@ -1,0 +1,56 @@
+.airnow-navigation {
+}
+
+.airnow-navigation__list {
+  @include clearList;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  flex-grow: 1;
+
+  @media (min-width: $laptop) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.airnow-navigation__item {
+  margin-bottom: 30px;
+
+  @media (min-width: $laptop) {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+
+  &:last-of-type {
+    margin: 0;
+  }
+}
+
+.airnow-navigation__link {
+  @include font-set(14px, 20px, 1px);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $text500;
+
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: color;
+
+  &:hover,
+  &:focus,
+  &--active {
+    color: $purple;
+  }
+
+  &--main {
+    color: $white1000;
+  }
+
+  &--main:hover,
+  &--main:focus {
+    color: $white800;
+  }
+}
