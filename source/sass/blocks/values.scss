@@ -1,0 +1,277 @@
+.airnow-values {
+}
+
+.airnow-values__wrapper {
+  width: 100%;
+  max-width: $maxWidth;
+  margin: 0 auto;
+}
+
+.airnow-values__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  padding: 50px 6%;
+
+  box-sizing: border-box;
+
+  @media (min-width: $tablet) {
+    padding: 70px 8%;
+  }
+
+  @media (min-width: $laptop) {
+    padding: 110px 5%;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 105px 4%;
+  }
+
+  @media (min-width: $maxDesktop) {
+    padding: 105px 5.5%;
+  }
+}
+
+.airnow-values__title {
+  margin: 0;
+  margin-bottom: 20px;
+
+  @include font(22px, 1.05);
+  color: $text1000;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 40px;
+
+    font-size: 38px;
+  }
+
+  @media (min-width: $laptop) {
+    margin-bottom: 45px;
+
+    font-size: 48px;
+  }
+}
+
+.airnow-values__list {
+  @include clearList;
+
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+
+  @media (min-width: $laptop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 48px;
+    grid-column-gap: 48px;
+  }
+
+  @media (min-width: $maxDesktop) {
+    grid-row-gap: 60px;
+    grid-column-gap: 60px;
+  }
+}
+
+.airnow-values__item {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 0 7%;
+
+  border-radius: 6px;
+
+  background-color: $white1000;
+
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(67, 74, 121, 0.15);
+
+  @media (min-width: $tablet) {
+    margin-bottom: 15px;
+    padding: 0 6%;
+  }
+
+  @media (min-width: $laptop) {
+    margin-bottom: 0;
+    padding: 35px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.airnow-values__item-question {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 0;
+
+  @include font(18px, 1.5);
+  font-weight: 700;
+  color: $text1000;
+
+  @media (min-width: $tablet) {
+    padding: 25px 0;
+
+    font-size: 24px;
+  }
+
+  @media (min-width: $laptop) {
+    padding: 0;
+    margin-bottom: 25px;
+  }
+}
+
+.airnow-values__item-toggle {
+  position: relative;
+
+  flex-shrink: 0;
+
+  width: 33px;
+  height: 33px;
+  margin: 0;
+  padding: 0;
+  margin-left: 30px;
+
+  border: 1px solid #E7EFF8;
+  border-radius: 50%;
+
+  background-color: $white1000;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    width: 46px;
+    height: 46px;
+  }
+
+  @media (min-width: $laptop) {
+    display: none;
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+
+    display: block;
+    width: 1.5px;
+    height: 13px;
+
+    background-color: $purple;
+
+    transform: translate(-50%, -50%);
+
+    transition-timing-function: linear;
+    transition-duration: 200ms;
+    transition-property: transform;
+
+    @media (min-width: $tablet) {
+      width: 2px;
+      height: 17px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+
+    display: block;
+    height: 1.5px;
+    width: 13px;
+
+    background-color: $purple;
+
+    transform: translate(-50%, -50%);
+
+    @media (min-width: $tablet) {
+      height: 2px;
+      width: 17px;
+    }
+  }
+
+  &--opened {
+    &::before {
+      transform-origin: center;
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+}
+
+.airnow-values__item-toggle span {
+  @include visuallyHidden;
+}
+
+.airnow-values__item-answer {
+  max-height: 0;
+
+  overflow: hidden;
+
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transition-property: max-height;
+
+  @media (min-width: $laptop) {
+    max-height: none;
+    height: auto;
+  }
+}
+
+.airnow-values__item-list {
+  @include clearList;
+
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 35px;
+  }
+
+  @media (min-width: $laptop) {
+    padding-bottom: 0;
+  }
+}
+
+.airnow-values__item-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  @include font(14px, 1.3);
+  color: $text800;
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+  }
+
+  @media (min-width: $laptop) {
+    margin-bottom: 10px;
+  }
+
+  &::before {
+    position: relative;
+    content: '';
+
+    flex-shrink: 0;
+
+    width: 10px;
+    height: 10px;
+    margin-top: 7px;
+    margin-right: 15px;
+
+    background-image: url("../images/check.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:last-of-type {
+    margin: 0;
+  }
+}

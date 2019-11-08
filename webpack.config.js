@@ -18,6 +18,7 @@ module.exports = {
       ? ['webpack-dev-server/client', './source/js/index.js']
       : ['./source/js/index.js'],
     main: ['./source/js/main.js'],
+    careers: ['./source/js/careers.js'],
     slick: ['./source/js/slick.js'],
     slider: ['./source/js/slider.js'],
   },

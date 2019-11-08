@@ -43,10 +43,6 @@
   color: $text1000;
   text-align: center;
 
-  transition-timing-function: linear;
-  transition-duration: 200ms;
-  transition-property: transform, opacity;
-
   @media (min-width: $tablet) {
     margin-bottom: 30px;
 
@@ -63,11 +59,6 @@
     margin-bottom: 45px;
 
     @include font-set(48px, 50px, 0);
-  }
-
-  &--hidden {
-    transform: translateY(30%);
-    opacity: 0;
   }
 }
 
@@ -90,10 +81,6 @@
 
   box-sizing: border-box;
 
-  transition-timing-function: linear;
-  transition-duration: 200ms;
-  transition-property: transform, opacity;
-
   @media (min-width: $tablet) {
     margin-bottom: 15px;
     padding: 0 6%;
@@ -105,11 +92,6 @@
 
   &:last-child {
     margin-bottom: 0;
-  }
-
-  &--hidden {
-    transform: translateY(20%);
-    opacity: 0;
   }
 
   &:hover,
