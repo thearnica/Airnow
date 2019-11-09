@@ -13,24 +13,24 @@
   align-items: center;
 
   width: 100%;
-  padding: 50px 6%;
+  padding: 0 6%;
 
   box-sizing: border-box;
 
   @media (min-width: $tablet) {
-    padding: 70px 8%;
+    padding: 0 8%;
   }
 
   @media (min-width: $laptop) {
-    padding: 110px 5%;
+    padding: 0 5%;
   }
 
   @media (min-width: $desktop) {
-    padding: 105px 4%;
+    padding: 0 4%;
   }
 
   @media (min-width: $maxDesktop) {
-    padding: 105px 5.5%;
+    padding: 0 5.5%;
   }
 }
 
@@ -59,14 +59,21 @@
   @include clearList;
 
   width: 100%;
-  max-width: 900px;
+  max-width: $innerMaxWidth;
   margin: 0 auto;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 50px;
+  }
 
   @media (min-width: $laptop) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 48px;
     grid-column-gap: 48px;
+
+    margin-bottom: 60px;
   }
 
   @media (min-width: $maxDesktop) {
@@ -274,4 +281,90 @@
   &:last-of-type {
     margin: 0;
   }
+}
+
+.airnow-values__video {
+  position: relative;
+
+  @include center;
+
+  width: 100vw;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+    max-width: $innerMaxWidth;
+    margin: 0 auto;
+  }
+}
+
+.airnow-values__video-ratio {
+  position: relative;
+
+  width: 100%;
+  height: 0;
+  padding-top: 50%;
+}
+
+.airnow-values__video-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.airnow-values__video-content iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.airnow-values__preview {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  @include center;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(0deg, rgba(92, 78, 254, 0.81), rgba(92, 78, 254, 0.81)), url("../images/preview.png");
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: linear-gradient(0deg, rgba(92, 78, 254, 0.81), rgba(92, 78, 254, 0.81)), url("../images/preview@2x.png");
+  }
+}
+
+.airnow-values__play {
+  @include center;
+
+  width: 80px;
+  margin: 0;
+  padding: 0;
+
+  color: $purple;
+
+  border: 0;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    width: 100px;
+  }
+
+  @media (min-width: $laptop) {
+    width: 126px;
+  }
+}
+
+.airnow-values__play span {
+  @include visuallyHidden;
+}
+
+.airnow-values__play svg {
+  width: 100%;
+  height: auto;
 }

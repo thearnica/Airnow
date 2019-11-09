@@ -109,4 +109,12 @@
   }
 }
 
+.airnow-main__values {
+  margin-bottom: 50px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 90px;
+  }
+}
+
 
