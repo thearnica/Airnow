@@ -6,6 +6,7 @@
   },
   "main": "index.js",
   "scripts": {
+    "nope": "echo 'nope'",
     "webp": "gulp webp",
     "start:webpack": "NODE_ENV=development webpack-dev-server --hot --host 0.0.0.0 --port 3000",
     "start": "yarn webp && yarn start:webpack",
